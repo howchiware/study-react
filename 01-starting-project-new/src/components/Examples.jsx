@@ -31,14 +31,16 @@ export default function Examples() {
     return (
         <Section title="Examples" id="examples">
             {/* {tabContent}를 이곳에 붙인 이유: 목적이 모든 종류의 탭에 적용되어 앱의 다양한 위치에 있는 내용을 제어하기 위함함  */}
-            <Tabs buttons={
-                <>
-                    <TabButton isSelected={selectedTopic === 'components'} onClick={() => handleSelect('components')}>Components</TabButton>
-                    <TabButton isSelected={selectedTopic === 'jsx'} onClick={() => handleSelect('jsx')}>JSX</TabButton>
-                    <TabButton isSelected={selectedTopic === 'props'} onClick={() => handleSelect('props')}>Props</TabButton>
-                    <TabButton isSelected={selectedTopic === 'state'} onClick={() => handleSelect('state')}>State</TabButton>
-                </>
-            }>
+            <Tabs
+                buttonsContainer="menu"
+                buttons={
+                    <>
+                        <TabButton isSelected={selectedTopic === 'components'} onClick={() => handleSelect('components')}>Components</TabButton>
+                        <TabButton isSelected={selectedTopic === 'jsx'} onClick={() => handleSelect('jsx')}>JSX</TabButton>
+                        <TabButton isSelected={selectedTopic === 'props'} onClick={() => handleSelect('props')}>Props</TabButton>
+                        <TabButton isSelected={selectedTopic === 'state'} onClick={() => handleSelect('state')}>State</TabButton>
+                    </>
+                }>
                 {tabContent}
             </Tabs>
         </Section>
