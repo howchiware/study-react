@@ -32,7 +32,6 @@ export default function Examples() {
         <Section title="Examples" id="examples">
             {/* {tabContent}를 이곳에 붙인 이유: 목적이 모든 종류의 탭에 적용되어 앱의 다양한 위치에 있는 내용을 제어하기 위함함  */}
             <Tabs
-                buttonsContainer="menu"
                 buttons={
                     <>
                         <TabButton isSelected={selectedTopic === 'components'} onClick={() => handleSelect('components')}>Components</TabButton>
